@@ -1,3 +1,11 @@
+// autor: Krystyna Tokarska
+// Z klasy Pojazd dziedziczą Samochod (dodatkowe atrybuty segment i VIN) oraz Jednoslad (dodatkowy atrybut typ).
+// Obie wspomniane klasy wykorzystują autorskie enumeracje i zostają wyposażone w konstruktory oraz metody wyswietl,
+// nadpisujące metody o tej samej nazwie w klasach nadrzędnych. Konstruktory mają wywoływać konstruktory klasy
+// nadrzędnej i wpisywać się w logikę autonumerowania i wyświetlania informacji o numeracji. W szczególności, klasy
+// te powinny mieć konstruktory pobierające odpowiednio 8 i 7 atrybutów - a jednoślad dodatkowo konstruktor, który
+// nie pobiera wszystkich atrybutów (z uwagi na specyficzną logikę opisu rowerów i hulajnóg tradycyjnych). Metoda
+// wyświetlająca klasy Jednoślad ma pomijać wartości niewprowadzone.
 public class TwoWheeler extends Vehicle {
     private String type;
 

@@ -1,3 +1,10 @@
+// autor: Krystyna Tokarska
+// Ostatnią klasą dziedziczącą bezpośrednio z maszyny jest klasa Pojazd. Klasa zawierać będzie pojedynczy konstruktor,
+// standardową metodę wyświetlającą oraz chronione atrybuty typu double moc oraz momentObrotowy. Konstruktor ma
+// realizować autonumerowanie pojazdów. W tym celu należy posłużyć się parą klasowych atrybutów typu int: nrPojazdu
+// oraz maxLiczbaPojazdow (ten ostatni statyczny). Metoda wyświetlająca ma uwzględniać obie wskazane informacje, np.
+// Pojazd 7 z 12....
+
 public class Vehicle extends Machine {
     protected double power;
     protected double torque;
@@ -11,7 +18,7 @@ public class Vehicle extends Machine {
         this.power = power;
         this.torque = torque;
         if (vehicleNumberStatic >= maximumVehicles) {
-            throw new RuntimeException("There can't be so many vehicles.");
+            throw new IllegalArgumentException("There can't be so many vehicles.");
         } else {
             this.vehicleNumber = vehicleNumberStatic;
             vehicleNumberStatic += 1;

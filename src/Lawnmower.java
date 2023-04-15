@@ -1,3 +1,9 @@
+// autor: Krystyna Tokarska
+// Uzupełnij repozytorium o klasę Kosiarka, która: - dziedziczy z maszyny; - wprowadza prywatne atrybuty czyMelekser
+// (typu boolean), czyNaped(j.w.) i liczbaOstrzy (typu int); - posiada, analogicznie jak klasa Kosiarka, jeden
+// konstruktor i metodę wyswietl, która wyświetla komplet 7 atrybutów w zorganizowanej formie; - dodatkowo, klasa ma
+// zawierać metody set dla wszystkich trzech nowowprowadzanych atrybutów.
+
 public class Lawnmower extends Machine {
     private boolean isBlender;
     private boolean isPropultion;
@@ -9,7 +15,7 @@ public class Lawnmower extends Machine {
         this.isBlender = isBlender;
         this.isPropultion = isDrive;
         if (blades < 0) {
-            throw new RuntimeException("There can't be a negative number of blades");
+            throw new IllegalArgumentException("There can't be a negative number of blades");
         } else {
             this.blades = blades;
         }
@@ -37,7 +43,7 @@ public class Lawnmower extends Machine {
 
     public void setBlades(int blades) {
         if (blades < 0) {
-            throw new RuntimeException("There can't be a negative number of blades");
+            throw new IllegalArgumentException("There can't be a negative number of blades");
         } else {
             this.blades = blades;
         }

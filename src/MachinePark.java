@@ -1,3 +1,9 @@
+// autor: Krystyna Tokarska
+// W metodzie głównej klasy ParkMaszynowy zadeklarować po 2 obiekty każdej klasy, w stosunku do której jest to możliwe.
+// Wszystkie obiekty trafiają do pojedynczej kolekcji i są wyświetlane pętlą for each. Jakiej modyfikacji należy
+// dokonać w klasie Maszyna, aby było to możliwe? Wykorzystaj dodolną metodę set obiektu klasy Kosiarka i wyświetl
+// ten obiekt ponownie.
+
 import java.util.ArrayList;
 import java.util.List;
 

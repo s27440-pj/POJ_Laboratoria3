@@ -1,3 +1,7 @@
+// autor: Krystyna Tokarska
+// Zaimplementuj klasę Lokomotywa dziedziczącą po maszynie. Klasa ta ma dodawać dwa prywatne atrybuty
+// charakterystyczne dla lokomotyw i nieuwzględnione wcześniej w maszynie. Klasa ta ma mieć konstruktor, przyjmujący
+// komplet 6 parametrów oraz metodę wyswietl, wyrzucającą w zamyśle na ekran wyczerpujący opis danej lokomotywy.
 public class Locomotive extends Machine {
 
     private TypeOfCarrige typeOfCarrige;
@@ -13,7 +17,7 @@ public class Locomotive extends Machine {
         this.typeOfCarrige = typeOfCarrige;
 
         if (yearOfProduction < 1802 || yearOfProduction > 2023) {
-            throw new RuntimeException("First locomotive was created in 1802, and the newest one in 2023.");
+            throw new IllegalArgumentException("First locomotive was created in 1802, and the newest one in 2023.");
         } else {
             this.yearOfProduction = yearOfProduction;
         }
@@ -33,7 +37,7 @@ public class Locomotive extends Machine {
 
     public void setYearOfProduction(int yearOfProduction) {
         if (yearOfProduction < 1802 || yearOfProduction > 2023) {
-            throw new RuntimeException("First locomotive was created in 1802, and the newest one in 2023.");
+            throw new IllegalArgumentException("First locomotive was created in 1802, and the newest one in 2023.");
         } else {
             this.yearOfProduction = yearOfProduction;
         }
