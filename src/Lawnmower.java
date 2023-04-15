@@ -5,10 +5,7 @@ public class Lawnmower extends Machine {
 
     public Lawnmower(String mark, String name, double engineCapacity, EngineType engineType, boolean isBlender,
                      boolean isDrive, int blades) {
-        this.mark = mark;
-        this.name = name;
-        this.engineCapacity = engineCapacity;
-        this.engineType = engineType;
+        super(mark, name, engineCapacity, engineType);
         this.isBlender = isBlender;
         this.isPropultion = isDrive;
         if (blades < 0) {

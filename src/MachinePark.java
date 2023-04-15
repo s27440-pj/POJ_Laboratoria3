@@ -5,7 +5,7 @@ public class MachinePark {
 
     public static void main(String[] args) {
 
-        List<Object> machines = new ArrayList<>();
+        List<Machine> machines = new ArrayList<>();
         Locomotive locomotive1 = new Locomotive("Siemens", "Vectron", 20.0,
                 Machine.EngineType.steam, Locomotive.TypeOfCarrige.cargo, 2010);
         Locomotive locomotive2 = new Locomotive("ZNTK", "EU07A", 12.0,
@@ -38,21 +38,8 @@ public class MachinePark {
         machines.add(twoWheeler2);
 
         // Can I do it better (easier)?
-        for (Object machine : machines) {
-            if (machine instanceof Locomotive)
-                ((Locomotive) machine).display();
-            else if (machine instanceof Lawnmower) {
-                ((Lawnmower) machine).display();
-            } else if (machine instanceof Vehicle) {
-                ((Vehicle) machine).display();
-            } else if (machine instanceof Car) {
-                ((Car) machine).display();
-            } else {
-                ((TwoWheeler) machine).display();
-            }
-
-            // I want it to work only with this
-            // machine.display();
+        for (Machine machine : machines) {
+            machine.display();
         }
 
         lawnmower1.setBlades(20);

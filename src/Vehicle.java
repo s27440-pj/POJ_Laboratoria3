@@ -2,15 +2,12 @@ public class Vehicle extends Machine {
     protected double power;
     protected double torque;
     protected int vehicleNumber;
-    public static int maximumVehicles = 12;
-    public static int vehicleNumberStatic = 1;
+    protected static final int maximumVehicles = 12;
+    protected static int vehicleNumberStatic = 1;
 
     public Vehicle(String mark, String name, double engineCapacity, EngineType engineType, double power,
                    double torque) {
-        this.mark = mark;
-        this.name = name;
-        this.engineCapacity = engineCapacity;
-        this.engineType = engineType;
+        super(mark, name, engineCapacity, engineType);
         this.power = power;
         this.torque = torque;
         if (vehicleNumberStatic >= maximumVehicles) {
@@ -21,7 +18,8 @@ public class Vehicle extends Machine {
         }
     }
 
-    public Vehicle() {
+    public Vehicle(String mark, String name) {
+        super(mark, name);
         if (vehicleNumberStatic >= maximumVehicles) {
             throw new RuntimeException("There can't be so many vehicles.");
         } else {

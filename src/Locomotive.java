@@ -1,17 +1,15 @@
 public class Locomotive extends Machine {
-    public enum TypeOfCarrige {
-        passenger, cargo, universal;
-    }
 
     private TypeOfCarrige typeOfCarrige;
     private int yearOfProduction;
 
+    public enum TypeOfCarrige {
+        passenger, cargo, universal
+    }
+
     public Locomotive(String mark, String name, double engineCapacity, EngineType engineType, TypeOfCarrige
             typeOfCarrige, int yearOfProduction) {
-        this.mark = mark;
-        this.name = name;
-        this.engineCapacity = engineCapacity;
-        this.engineType = engineType;
+        super(mark, name, engineCapacity, engineType);
         this.typeOfCarrige = typeOfCarrige;
 
         if (yearOfProduction < 1802 || yearOfProduction > 2023) {
